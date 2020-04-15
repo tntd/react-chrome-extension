@@ -7,27 +7,27 @@ import contextMenus from "./background/contextMenus";
 global.Promise = bluebird;
 
 function promisifier(method) {
-	return function promisified(...args) {
-		return new Promise((resolve) => {
-			args.push(resolve);
-			method.apply(this, args);
-		});
-	};
+    return function promisified(...args) {
+        return new Promise((resolve) => {
+            args.push(resolve);
+            method.apply(this, args);
+        });
+    };
 }
 
 function promisifyAll(obj, list) {
-	list.forEach(api => bluebird.promisifyAll(obj[api], { promisifier }));
+    list.forEach(api => bluebird.promisifyAll(obj[api], { promisifier }));
 }
 
 // let chrome extension api support Promise
 promisifyAll(chrome, [
-	"tabs",
-	"windows",
-	"browserAction",
-	"contextMenus"
+    "tabs",
+    "windows",
+    "browserAction",
+    "contextMenus"
 ]);
 promisifyAll(chrome.storage, [
-	"sync"
+    "sync"
 ]);
 
 contextMenus();

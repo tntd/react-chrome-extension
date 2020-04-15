@@ -1,36 +1,36 @@
 {
-	"version": "0.0.1",
-	"name": "sinan",
-	"manifest_version": 2,
-	"description": "司南chrome插件",
-	"browser_action": {
-		"default_title": "Sinan Chrome Extension",
-		"default_popup": "popup.html"
-	},
-	"icons": {
-		"16": "img/icon-16.png",
-		"48": "img/icon-48.png",
-		"128": "img/icon-128.png"
-	},
-	"web_accessible_resources": [
-		"inject.html"
-	],
-	"background": {
-		"page": "background.html"
-	},
-	"chrome_url_overrides": {
-		"newtab": "newtab.html"
-	},
-	"permissions": [
-		"contextMenus",
-		"management",
-		"tabs",
-		"storage",
-		"unlimitedStorage",
-		"webRequest",
-		"notifications",
-		"http://*/*",
-		"https://*/*"
-	],
-	"content_security_policy": "default-src 'self'; script-src 'self'; style-src * 'unsafe-inline'; img-src 'self' data:;"
+    "version": "0.0.1",
+    "name": "sinan",
+    "manifest_version": 2,
+    "description": "司南chrome插件",
+    "browser_action": {
+        "default_title": "Sinan Chrome Extension",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "img/icon-16.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    },
+    "web_accessible_resources": [
+        "inject.html"
+    ],
+    "background": {
+        "page": "background.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "permissions": [
+        "contextMenus",
+        "management",
+        "tabs",
+        "storage",
+        "unlimitedStorage",
+        "webRequest",
+        "notifications",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_security_policy": "default-src 'self'; script-src 'self'; style-src * 'unsafe-inline'; img-src 'self' data:;"
 }

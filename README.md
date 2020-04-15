@@ -1,13 +1,13 @@
-# 司南chrome插件
+# react chrome插件解决方案
 
-> Re-doing the [https://github.com/altany/new-tab-chrome-extension](https://github.com/altany/new-tab-chrome-extension) using React and Redux
+> Re-doing the [https://github.com/tntd/react-chrome-extension.git](https://github.com/tntd/react-chrome-extension.git) react16+webpack4+less
 
 
 ## 安装
 
 ```bash
 # clone it
-$ git clone https://github.com/altany/react-new-tab-chrome-extension.git
+$ git clone https://github.com/tntd/react-chrome-extension.git
 
 # Install dependencies
 $ npm install
@@ -28,9 +28,6 @@ $ npm run dev
 
 This boilerplate uses `Webpack`, `react-transform` and `Redux`. You can hot reload by editing related files of Popup & Window & Inject page.
 
-#### Using Redux DevTools Extension
-
-You can use [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) on development mode.
 
 ## Build
 
