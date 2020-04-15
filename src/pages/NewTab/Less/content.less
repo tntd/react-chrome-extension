@@ -1,0 +1,222 @@
+:global {
+    .todo-container {
+        .todo-body {
+            .main-content {
+                & {
+                    flex: 1;
+                    background-color: #fff;
+                    border-right: 1px solid #f1f1f1;
+                    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.6, 1);
+                    transition: opacity 250ms cubic-bezier(0.4, 0, 0.6, 1);
+                }
+
+                .todo-editor {
+                    & {
+                        vertical-align: top;
+                        padding: 30px;
+                    }
+
+                    .editor-header {
+                        & {
+                            height: 36px;
+                            line-height: 36px;
+                            clear: both;
+                        }
+
+                        h2 {
+                            display: inline-block;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 25px;
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                        .actions {
+                            & {
+                                float: right;
+                            }
+
+                            a {
+                                & {
+                                    padding: 0 12px;
+                                    display: inline-block;
+                                    position: relative;
+                                    cursor: pointer;
+                                    color: #34373d;
+                                    font-size: 15px;
+                                }
+
+                                i {
+                                    font-size: 15px;
+                                    margin-right: 4px;
+                                }
+
+                                &:hover {
+                                    text-decoration: none !important;
+                                    background: #ededed;
+                                }
+                            }
+                        }
+                    }
+
+                    .today-date {
+                        font-weight: 200;
+                        font-size: 12px;
+                        color: #34373d;
+                        margin-bottom: 20px;
+                    }
+
+                    .editor-body {
+                        height: calc(~"100vh - 152px");
+                        overflow-x: hidden;
+                        overflow-y: auto;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .todo-list {
+                            & {
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            li {
+                                & {
+                                    line-height: 1.6;
+                                    padding: 11px 0;
+                                    border-bottom: 1px solid #f0f0f0;
+                                    display: flex;
+                                }
+
+                                &.checked {
+                                    .name {
+                                        color: #9a9a9a;
+                                        text-decoration: line-through;
+                                    }
+
+                                    .name .ant-input {
+                                        color: #9a9a9a;
+                                        text-decoration: line-through;
+                                    }
+                                }
+
+                                &:hover {
+                                    .delete-btn {
+                                        opacity: 1;
+                                    }
+                                }
+
+                                .checkbox {
+                                    padding-right: 10px;
+                                    cursor: pointer;
+
+                                    i {
+                                        color: #5ca52d;
+                                    }
+                                }
+
+                                .name {
+                                    color: #34373d;
+                                    flex: 1;
+
+                                    .ant-input {
+                                        position: relative;
+                                        top: -1px;
+                                        border: none;
+                                        outline: none;
+                                        width: 500px;
+                                        flex: 1;
+                                        font-size: 16px;
+                                        padding: 0;
+                                        width: 100%;
+                                        resize: none;
+
+                                        &:hover,
+                                        &:focus {
+                                            outline: none;
+                                            border: none;
+                                            box-shadow: none;
+                                        }
+                                    }
+                                }
+
+                                .delete-btn {
+                                    & {
+                                        margin-left: 20px;
+                                        opacity: 0.1;
+                                        cursor: pointer;
+                                        color: #999;
+                                        transition: .5s all ease-in-out;
+                                    }
+
+                                    &:hover i {
+                                        color: red;
+                                    }
+                                }
+
+                                .importance-btn {
+                                    margin-left: 10px;
+                                    cursor: pointer;
+
+                                    &.checked i {
+                                        color: #5ca52d;
+                                    }
+
+                                    i {
+                                        color: #767678;
+                                    }
+
+                                    i:hover {
+                                        color: #5ca52d;
+                                    }
+                                }
+                            }
+                        }
+
+                        .add-task-handle {
+                            height: 48px;
+                            line-height: 48px;
+                            display: flex;
+                            border-bottom: 1px solid #f0f0f0;
+
+                            i {
+                                color: #767678;
+                                margin-right: 10px;
+                                width: 16px;
+                                vertical-align: -webkit-baseline-middle;
+                            }
+
+                            .icon-enter {
+                                margin-left: 20px;
+                                font-size: 14px;
+                                color: #b4b4b4;
+                                margin-right: 0;
+                            }
+
+                            input {
+                                position: relative;
+                                top: 8px;
+                                border: none;
+                                outline: none;
+                                width: 500px;
+                                flex: 1;
+                                font-size: 16px;
+                                padding: 0;
+
+                                &:hover,
+                                &:focus {
+                                    outline: none;
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
